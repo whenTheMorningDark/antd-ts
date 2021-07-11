@@ -1,0 +1,7 @@
+.sidebar{
+  width: 220px;
+  height: 100%;
+}
+.sidebar>.ant-menu{
+  height: 100%;
+}

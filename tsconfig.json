@@ -1,26 +1,28 @@
 {
+  // "extends": "./path.json",
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext", "ES2015", "ES2015.Promise"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react",
+    "baseUrl": ".", // 解析非相对模块名的基准目录。
+    "paths": {
+      //路径映射配置,跟webpack中的路径映射对应起来
+      // "@component/*": ["src/component/*"],
+      "@/*": ["src/*"],
+      "@views/*": ["src/views/*"]
+      // "@utils/*": ["src/utils/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
